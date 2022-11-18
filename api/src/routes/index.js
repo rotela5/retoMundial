@@ -8,12 +8,16 @@ const router = Router();
 
 
 const getApiInfo = async () =>{
-    const apiUrl = await axios.get(`https://api.cup2022.ir/api/v1/user.key=${API_KEY}`);
+    const apiUrl = await axios.get(`https://api.cup2022.ir/api/v1/user=${API_KEY}`);
     const apiInfo = await apiUrl.data.map(el =>{
         return {
             id:el.id,
-            name: el.name,
-            golesAfavor: el.golesAfavor,
+            name_en: el.name_en,
+            name_fa: el.name_fa,
+            flag:el.flag,
+            iso2:el.ise2,
+            grupo:el.grupo,
+            
             golesEncontra: el.golesEncontra,
             seguidor:el.seguidor,
         };
@@ -22,7 +26,7 @@ const getApiInfo = async () =>{
 };
 
 
-const getDBInfo = async () => {
+/*const getDBInfo = async () => {
     return await Raza.findAll({
        include:{
            model: Seguidor,
@@ -32,7 +36,7 @@ const getDBInfo = async () => {
            },
        } 
     })
-};
+};*/
 
 const getAllEquipo = async () => {
     const apiInfo = await getApiInfo();

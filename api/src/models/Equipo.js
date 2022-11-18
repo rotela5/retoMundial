@@ -8,42 +8,39 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
-      primaryKey: true,
+      primaryKey: true
     },
     name_en: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     name_fa: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
    flag: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     fifa_code: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     iso2: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     grupos: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
-   
-   
-   
-   
-    golesAfavor: {
-      type: DataTypes.STRING
+     golesAfavor: {
+      type: DataTypes.STRING,
     },
     golesEncontra: {
       type: DataTypes.STRING
     },
   });
 };
-_
+
+
